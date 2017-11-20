@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yogi Bingo</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Outline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Questrial" rel="stylesheet">
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+    
+
+</head>
+<body>
+    <!-- This is the cover page -->
+    <header>
+        <div class="wrapper">
+            <h1>Yogi Bingo</h1>
+            <!-- Yoga description goes in here -->
+            <img src="assets/lotus.png" alt="lotus flower" class="lotus">
+            <p>
+                Off to your first yoga class? Or even better, your first yoga retreat!
+            </p>
+            <p>
+                Why not get a little playful with some Yogi Bingo as you enter the world of yoga lingo. 
+            </p>
+            <p>
+                 Check the words off the list as you hear your instructors and fellow yogis say them out loud. 
+            </p>
+            <button id="start">
+                Let's play
+            </button>
+        </div>
+    </header>
+    <!-- Bingo sheet is displayed in this section -->
+    <section id="bingoGame">
+        <div class="wrapper">
+            <!-- grid that appears for mobile view of the bingo sheet -->
+            <ul class="grid">
+                <li class="1">
+                    <p>1</p>
+                </li>
+                <li class="2">
+                    <p>2</p>
+                </li>
+                <li class="3">
+                    <p>3</p>
+                </li>
+                <li class="4">
+                    <p>4</p>
+                </li>
+                <li class="5">
+                    <p>5</p>
+                </li>
+                <li class="6">
+                    <p>6</p>
+                </li>
+                <li class="7">
+                    <p>7</p>
+                </li>
+                <li class="8">
+                    <p>8</p>
+                </li>
+                <li class="9">
+                    <p>9</p>
+                </li>
+            </ul>
+            <!-- This is the users bingo sheet -->
+            <ul class="wordSheet">
+                <!-- i=0 -->
+                <input type="checkbox" id="word1" name="word1">
+                <li>
+                    
+                    <label for="word1" class="word1">placeholder 1</label>
+                </li>
+                <!-- i=1 -->
+                <input type="checkbox" id="word2" name="word2">
+                <li>    
+                    <label for="word2" class="word2">placeholder 2</label>
+                </li>
+                <!-- i=2 -->
+                <input type="checkbox" id="word3" name="word3">
+                <li>
+                    <label for="word3" class="word3">placeholder 3</label>
+                </li>
+                <!-- i=3 -->
+                <input type="checkbox" id="word4" name="word4">
+                <li>
+                    <label for="word4" class="word4">placeholder 4</label>
+                </li class="bonusWord">
+                <!-- i=4 -->
+                <input type="checkbox" id="word5" name="word5">
+                <li>
+                    <label for="word5" class="word5">placeholder 5</label>
+                    <p>BONUS WORD</p>
+                    <i class="fa fa-star"></i>
+                </li>
+                <!-- i=5 -->
+                <input type="checkbox" id="word6" name="word6">
+                <li>
+                    <label for="word6" class="word6">placeholder 6</label>
+
+                </li>
+                <!-- i=6 -->
+                <input type="checkbox" id="word7" name="word7">
+                <li>
+                    <label for="word7" class="word7">placeholder 7</label>
+
+                </li>
+                <!-- i=7 -->
+                <input type="checkbox" id="word8" name="word8">
+                <li>
+                    <label for="word8" class="word8">placeholder 8</label>
+
+                </li>
+                <!-- i=8 -->
+                <input type="checkbox" id="word9" name="word9">
+                <li>
+                    <label for="word9" class="word9" >placeholder 9</label>
+                </li>
+            </ul>
+            <button id="newSheet">
+                New Sheet
+            </button>
+            <button id="endGame">
+                End Game
+            </button>
+        </div>
+    </section>
+
+    <!-- Results/Exit page here -->
+    <section id="results">
+        <div class="wrapper">
+            <h1>
+                <!-- Bingo/ Thank you for your energy will appear here depending on how the user chooses to exit game -->
+            </h1>
+            <div class="line">
+                <h3>TIME</h3>
+            </div>
+            <!-- Users time will be appended to this
+                            <h2> -->
+            <h2>
+                <time>00:00:00</time>
+            </h2>
+            <div class="line">
+                <h3>SCORE</h3>
+            </div>
+            <!-- Points will be appended to the <h4><span> -->
+            <h4>
+                <span>0</span>points
+            </h4>
+
+            <div class="line">
+                <h3>WORD LIST</h3>
+            </div>
+                <div id="wordList">
+                    <!-- List of words crossed off will be appended to this section -->
+                </div>
+                <img src="assets/w_namaste.png" alt="hands together as a greeting symbol">
+            <h2 class="greeting">Namaste</h2>
+            <!-- buttons start here -->
+            <button id="playAgain">
+                Play again
+            </button>
+            <button id="home">
+                Home
+            </button>
+        </div>
+    </section>
+    <!-- jquery CDN-->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
