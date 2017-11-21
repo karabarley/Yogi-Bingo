@@ -7,6 +7,6 @@ Link: https://api.datamuse.com/words?rel_trg=yoga&max=10
 rel_trg:yoga, 
 max: 2000)
 
-You amy view the live version of this game in the link provided: http://karabarleta.com/yogiBingo/
+You may view the live version of this game in the link provided: http://karabarleta.com/yogiBingo/
 
 Namaste!
