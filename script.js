@@ -68,18 +68,41 @@ bingoApp.sections = function () {
 
 bingoApp.getWords = function(){//PART 3:: get words from API
     $.ajax({
-        url: "https://api.datamuse.com/words", //endpoint destination
-        method: "GET",
-        dataType: "json",
+        url: 'http://proxy.hackeryou.com',
+        dataType: 'json',
+        method: 'GET',
         data: {
-            rel_trg: "yoga",
-            max: 2000
+            reqUrl: 'https://api.datamuse.com/words',
+            params: {
+                // key: apiKey,
+                rel_trg: "yoga",
+                max: 200
+            },
+            proxyHeaders: {
+                'Some-Header': 'goes here'
+            },
+            xmlToJSON: false,
+            useCache: false
         }
-    }).then(function(results){ //results is an array of objects
+    }).then(function (results) {
         bingoApp.bankWords(results)
         bingoApp.randomizeWords()
         bingoApp.displayWords()
-    });
+});
+
+    // $.ajax({
+    //     url: "https://api.datamuse.com/words", //endpoint destination
+    //     method: "GET",
+    //     dataType: "json",
+    //     data: {
+    //         rel_trg: "yoga",
+    //         max: 100
+    //     }
+    // }).then(function(results){ //results is an array of objects
+    //     bingoApp.bankWords(results)
+    //     bingoApp.randomizeWords()
+    //     bingoApp.displayWords()
+    // });
 }
 
 bingoApp.bankWords = function(wordArray){ //PART 4:: create a bank of words from the API and store it in a new array
